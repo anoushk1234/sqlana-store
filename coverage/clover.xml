@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1667224903494" clover="3.2.0">
+  <project timestamp="1667224903494" name="All files">
+    <metrics statements="122" coveredstatements="55" conditionals="30" coveredconditionals="5" methods="23" coveredmethods="10" elements="175" coveredelements="70" complexity="0" loc="122" ncloc="122" packages="1" files="3" classes="3"/>
+    <file name="collection.ts" path="/Users/anoushkkharangate/Documents/sqlana-store/core/collection.ts">
+      <metrics statements="31" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="2"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="22" count="3" type="cond" truecount="1" falsecount="1"/>
+      <line num="23" count="3" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="27" count="3" type="stmt"/>
+      <line num="28" count="3" type="stmt"/>
+      <line num="29" count="3" type="stmt"/>
+      <line num="32" count="0" type="stmt"/>
+      <line num="33" count="0" type="stmt"/>
+      <line num="34" count="0" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="44" count="0" type="stmt"/>
+      <line num="45" count="0" type="stmt"/>
+      <line num="47" count="0" type="stmt"/>
+      <line num="48" count="0" type="stmt"/>
+      <line num="52" count="3" type="stmt"/>
+      <line num="53" count="3" type="stmt"/>
+      <line num="58" count="3" type="stmt"/>
+      <line num="59" count="3" type="stmt"/>
+      <line num="61" count="0" type="stmt"/>
+      <line num="62" count="0" type="stmt"/>
+      <line num="66" count="0" type="stmt"/>
+      <line num="67" count="0" type="stmt"/>
+      <line num="71" count="0" type="stmt"/>
+      <line num="72" count="0" type="stmt"/>
+      <line num="78" count="0" type="stmt"/>
+    </file>
+    <file name="document.ts" path="/Users/anoushkkharangate/Documents/sqlana-store/core/document.ts">
+      <metrics statements="7" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+    </file>
+    <file name="sdk.ts" path="/Users/anoushkkharangate/Documents/sqlana-store/core/sdk.ts">
+      <metrics statements="84" coveredstatements="39" conditionals="26" coveredconditionals="4" methods="17" coveredmethods="8"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="68" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="69" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="70" count="1" type="stmt"/>
+      <line num="71" count="1" type="stmt"/>
+      <line num="72" count="1" type="stmt"/>
+      <line num="73" count="1" type="stmt"/>
+      <line num="74" count="1" type="stmt"/>
+      <line num="79" count="1" type="stmt"/>
+      <line num="83" count="1" type="stmt"/>
+      <line num="84" count="1" type="stmt"/>
+      <line num="98" count="1" type="stmt"/>
+      <line num="99" count="1" type="stmt"/>
+      <line num="102" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="103" count="1" type="stmt"/>
+      <line num="104" count="1" type="stmt"/>
+      <line num="105" count="1" type="stmt"/>
+      <line num="107" count="0" type="stmt"/>
+      <line num="108" count="0" type="stmt"/>
+      <line num="113" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="114" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="115" count="1" type="stmt"/>
+      <line num="116" count="1" type="stmt"/>
+      <line num="118" count="0" type="stmt"/>
+      <line num="119" count="0" type="stmt"/>
+      <line num="120" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="125" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="126" count="0" type="stmt"/>
+      <line num="127" count="0" type="stmt"/>
+      <line num="128" count="0" type="stmt"/>
+      <line num="129" count="0" type="stmt"/>
+      <line num="132" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="133" count="0" type="stmt"/>
+      <line num="134" count="0" type="stmt"/>
+      <line num="138" count="0" type="stmt"/>
+      <line num="139" count="0" type="stmt"/>
+      <line num="148" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="149" count="0" type="stmt"/>
+      <line num="157" count="0" type="stmt"/>
+      <line num="159" count="0" type="stmt"/>
+      <line num="160" count="0" type="stmt"/>
+      <line num="162" count="0" type="stmt"/>
+      <line num="167" count="0" type="stmt"/>
+      <line num="169" count="0" type="stmt"/>
+      <line num="171" count="0" type="stmt"/>
+      <line num="172" count="0" type="stmt"/>
+      <line num="177" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="178" count="0" type="stmt"/>
+      <line num="180" count="0" type="stmt"/>
+      <line num="186" count="0" type="stmt"/>
+      <line num="187" count="0" type="stmt"/>
+      <line num="190" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="191" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="192" count="0" type="stmt"/>
+      <line num="194" count="0" type="stmt"/>
+      <line num="200" count="0" type="stmt"/>
+      <line num="201" count="0" type="stmt"/>
+      <line num="204" count="2" type="cond" truecount="0" falsecount="1"/>
+      <line num="205" count="2" type="cond" truecount="0" falsecount="1"/>
+      <line num="206" count="2" type="stmt"/>
+      <line num="212" count="2" type="stmt"/>
+      <line num="213" count="2" type="stmt"/>
+      <line num="216" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="217" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="218" count="1" type="stmt"/>
+      <line num="224" count="1" type="stmt"/>
+      <line num="225" count="1" type="stmt"/>
+      <line num="228" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="229" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="230" count="0" type="stmt"/>
+      <line num="231" count="0" type="stmt"/>
+      <line num="235" count="0" type="stmt"/>
+      <line num="236" count="0" type="stmt"/>
+      <line num="237" count="0" type="stmt"/>
+      <line num="241" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

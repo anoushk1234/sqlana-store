@@ -1,0 +1,4 @@
+node_modules
+wallet.json
+.env
+archive
