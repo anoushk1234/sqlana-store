@@ -56,7 +56,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-      - run: npm install && npm run build
+      - run: npm install && npm adduser && npm whoami && npm run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
