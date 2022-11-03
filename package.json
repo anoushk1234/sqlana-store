@@ -11,8 +11,7 @@
     "rebuild": "rm -rf dist && tsc",
     "start": "node dist/index.js",
     "test": "jest --coverage",
-    "test:watch": "jest --watch",
-    "publish": "npm publish"
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@project-serum/anchor": "^0.25.0",
