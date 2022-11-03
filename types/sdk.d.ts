@@ -1,6 +1,6 @@
 import { ShdwDrive, StorageAccountInfo } from "@shadow-drive/sdk";
 import { Connection, Keypair, PublicKey } from "@solana/web3.js";
-declare type Network = "mainnet-beta" | "testnet" | "devnet" | string;
+declare type Network = any;
 interface SDKProps {
     payer: Keypair;
     username?: string;

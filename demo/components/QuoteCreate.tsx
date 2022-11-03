@@ -26,8 +26,32 @@ import {
 import Avatar from "boring-avatars";
 import { ArrowUpIcon } from "@chakra-ui/icons";
 import { useState } from "react";
-export const QuoteCreate = ({ wallet }: any) => {
-  const [q, setQ] = useState("");
+import axios from "axios";
+import toast from "react-hot-toast";
+export const QuoteCreate = ({ update, setUpdate, address, onClose }: any) => {
+  const [q, setQ] = useState({
+    quote: "",
+    address: address,
+  });
+  async function createQuote() {
+    if (q.quote.length < 0) {
+      console.log("createQuote first");
+      return;
+    }
+    toast.loading("Creating Quote...", {
+      id: "createQuote",
+    });
+    const { data } = await axios.post("/api/quote/create", {
+      quote: q.quote,
+      address: q.address,
+    });
+    console.log("createQuote second", data);
+    setUpdate(!update);
+    toast.success("createQuote", {
+      id: "createQuote",
+    });
+    onClose();
+  }
   return (
     <Flex
       maxW="md"
@@ -47,7 +71,7 @@ export const QuoteCreate = ({ wallet }: any) => {
         <Flex justify="center" align="center">
           <Avatar
             size={40}
-            name={wallet}
+            name={address}
             variant="sunset"
             colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
           />
@@ -70,7 +94,18 @@ export const QuoteCreate = ({ wallet }: any) => {
           Backpack
         </chakra.h1> */}
 
-            <Input value={q} onChange={(e) => setQ(e.target.value)} w="full" />
+            <Input
+              required
+              color={"white"}
+              value={q.quote}
+              onChange={(e) =>
+                setQ({
+                  ...q,
+                  quote: e.target.value,
+                })
+              }
+              w="full"
+            />
           </Box>
         </Flex>
         {/* <Box
@@ -88,7 +123,7 @@ export const QuoteCreate = ({ wallet }: any) => {
           <TriangleUpIcon />
           <Text>{upvotes}</Text>
         </Box> */}
-        <Button>Submit</Button>
+        <Button onClick={createQuote}>Submit</Button>
       </Flex>
     </Flex>
   );

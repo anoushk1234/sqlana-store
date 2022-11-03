@@ -1,12 +1,13 @@
 import { StarIcon, TriangleUpIcon } from "@chakra-ui/icons";
 import { Flex, chakra, Text, HStack, Box } from "@chakra-ui/react";
 import Avatar from "boring-avatars";
-export const Quote = () => {
-  const upvotes = 10;
-  const upvoted = true;
-  const address = "0x1234567890w23456789012345678901234567890";
+export const Quote = ({ address, key, quote }: any) => {
+  // const upvotes = 10;
+  // const upvoted = true;
+  // const address = "0x1234567890w23456789012345678901234567890";
   return (
     <Flex
+      key={key}
       maxW="md"
       mx="auto"
       bg="black"
@@ -48,7 +49,7 @@ export const Quote = () => {
         </chakra.h1> */}
 
           <chakra.p mt={2} fontSize="md" color="white" fontStyle="italic">
-            &quot;Have you tried turning it off and on again?&quot;
+            &quot;{quote}&quot;
           </chakra.p>
         </Box>
         {/* <Box

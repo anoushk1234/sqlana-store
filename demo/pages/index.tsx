@@ -23,9 +23,16 @@ import {
 import { useEffect, useState } from "react";
 import { Quote } from "../components/Quote";
 import { QuoteCreate } from "../components/QuoteCreate";
+import axios from "axios";
 declare const window: any;
 const Home: NextPage = () => {
   const { connect } = useWalletKit();
+  interface Quote {
+    address: string;
+    quote: string;
+  }
+  const [quotes, setQuotes] = useState<Quote[]>([]);
+  const [update, setUpdate] = useState(false);
   const [connectedtext, setConnectedtext] = useState("Connect Wallet");
   const wallet = useConnectedWallet();
   const {
@@ -43,6 +50,14 @@ const Home: NextPage = () => {
     }
   }
   const { isOpen, onOpen, onClose } = useDisclosure();
+  useEffect(() => {
+    async function getAllQuotes() {
+      const { data } = await axios.get("/api/quote/getAll");
+      setQuotes(Object.values(data.collection));
+    }
+    getAllQuotes();
+  }, [update]);
+
   return (
     <Box
       display={"flex"}
@@ -158,7 +173,10 @@ const Home: NextPage = () => {
           filter: "blur(20px)",
         }}
       >
-        <Quote />
+        {quotes &&
+          quotes.map((q, index) => (
+            <Quote key={index} address={q.address} quote={q.quote} />
+          ))}
       </Box>
       <Flex justifyContent="center" mt="1rem">
         <Button w="fit-content" onClick={onOpen}>
@@ -169,7 +187,16 @@ const Home: NextPage = () => {
         <ModalOverlay />
         <ModalContent bgColor={"black"}>
           <ModalBody p="4">
-            <QuoteCreate wallet={wallet?.publicKey.toBase58() || ""} />
+            {connected ? (
+              <QuoteCreate
+                onClose={onClose}
+                update={update}
+                setUpdate={setUpdate}
+                address={wallet?.publicKey?.toBase58()}
+              />
+            ) : (
+              <Text color="white">Connect your wallet to create a quote</Text>
+            )}
           </ModalBody>
         </ModalContent>
       </Modal>

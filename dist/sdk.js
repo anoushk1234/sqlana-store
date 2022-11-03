@@ -19,7 +19,9 @@ const RPCSchema = zod_1.z.union([
     zod_1.z.string().url(),
     zod_1.z.string().refine((s) => ["mainnet-beta", "testnet", "devnet"].includes(s), (e) => ({ message: `Invalid cluster: ${e}` })),
 ]);
-const isURL = (s) => s.startsWith("http");
+function isURL(inp) {
+    return inp.startsWith("http");
+}
 class SqlanaStore {
     constructor(options) {
         this.password = options.password || "";

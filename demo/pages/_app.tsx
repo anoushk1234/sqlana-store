@@ -3,6 +3,7 @@ import { WalletKitProvider } from "@gokiprotocol/walletkit";
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
+import { Toaster } from "react-hot-toast";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WalletKitProvider
@@ -16,6 +17,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         ),
       }}
     >
+      {" "}
+      <Toaster />
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
