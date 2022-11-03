@@ -48,7 +48,7 @@ export const Quote = () => {
         </chakra.h1> */}
 
           <chakra.p mt={2} fontSize="md" color="white" fontStyle="italic">
-            "Have you tried turning it off and on again?"
+            &quot;Have you tried turning it off and on again?&quot;
           </chakra.p>
         </Box>
         {/* <Box
