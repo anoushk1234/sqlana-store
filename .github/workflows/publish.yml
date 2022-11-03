@@ -25,7 +25,7 @@ jobs:
 #         run: npm i vercel -g
 
       - name: Build
-        run: yarn install && yarn build
+        run: yarn install && yarn rebuild
 
       # - name: Deploy API
       #   run: vercel demo --prod --token $VERCEL_TOKEN
