@@ -1,0 +1,10 @@
+demo/
+wallet.json
+coverage/
+tests/
+archive/
+.github/
+jest.config.js
+readme.md
+.env
+.env.example
