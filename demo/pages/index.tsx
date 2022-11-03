@@ -13,6 +13,7 @@ import {
   ModalBody,
   Skeleton,
   useClipboard,
+  Link,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Avatar from "boring-avatars";
@@ -29,6 +30,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import { FiCopy } from "react-icons/fi";
 import { TiTick } from "react-icons/ti";
+import { AiFillGithub } from "react-icons/ai";
 declare const window: any;
 const Home: NextPage = () => {
   const { connect } = useWalletKit();
@@ -130,8 +132,7 @@ const Home: NextPage = () => {
         ) : (
           <Fade in={!wallet?.connected}>{connectedtext}</Fade>
         )}
-      </Button>
-
+      </Button>{" "}
       <Heading
         textAlign={"center"}
         color="white"
@@ -160,7 +161,13 @@ const Home: NextPage = () => {
         and not dynamically typed. 
         Store is dynamic like mongoDB, cheap as heck(1GB~$0.80) and immutable by choice.`}
       </Text>
-      <Flex color="white" fontFamily="monospace" justify="flex-end">
+      <Flex
+        color="white"
+        fontFamily="monospace"
+        justify="flex-end"
+        align="center"
+        gap="1rem"
+      >
         <motion.div
           transition={{
             ease: "easeInOut",
@@ -198,6 +205,9 @@ const Home: NextPage = () => {
             </Text>
           </Button>
         </motion.div>
+        <Link href="https://github.com/anoushk1234/sqlana-store">
+          <AiFillGithub size="2rem" color="white" />
+        </Link>
       </Flex>
       <Text
         style={{
@@ -211,7 +221,6 @@ const Home: NextPage = () => {
       >
         Try the demo!
       </Text>
-
       <Box
         w="40%"
         h="20rem"
@@ -265,6 +274,12 @@ const Home: NextPage = () => {
           </ModalBody>
         </ModalContent>
       </Modal>
+      <Flex
+        marginTop="1rem"
+        justify={"center"}
+        align={"center"}
+        marginY="1rem"
+      ></Flex>
     </Box>
   );
 };
