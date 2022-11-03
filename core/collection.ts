@@ -3,7 +3,7 @@ import { PublicKey } from "@solana/web3.js";
 import axios from "axios";
 import { MD5 } from "crypto-js";
 import fs from "fs";
-import SqlanaStore from "./sdk";
+import { SqlanaStore } from "./sdk";
 
 interface CollectionProps {
   collectionId?: string;

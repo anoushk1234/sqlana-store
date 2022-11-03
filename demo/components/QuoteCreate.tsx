@@ -67,7 +67,7 @@ export const QuoteCreate = ({ update, setUpdate, address, onClose }: any) => {
       alignItems={"center"}
       mt="6"
     >
-      <Flex flexDir="column" align="flex-end">
+      <Flex flexDir="column" align="flex-end" justify={"center"}>
         <Flex justify="center" align="center">
           <Avatar
             size={40}
@@ -123,7 +123,9 @@ export const QuoteCreate = ({ update, setUpdate, address, onClose }: any) => {
           <TriangleUpIcon />
           <Text>{upvotes}</Text>
         </Box> */}
-        <Button onClick={createQuote}>Submit</Button>
+        <Button onClick={createQuote} alignSelf="center">
+          Submit
+        </Button>
       </Flex>
     </Flex>
   );

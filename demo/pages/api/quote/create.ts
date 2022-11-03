@@ -2,7 +2,7 @@ import { bs58 } from "@project-serum/anchor/dist/cjs/utils/bytes";
 import { Keypair } from "@solana/web3.js";
 import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
-import SqlanaStore from "../../../utils/sdk";
+import { SqlanaStore } from "sqlana-store";
 
 export default async function handler(
   req: NextApiRequest,

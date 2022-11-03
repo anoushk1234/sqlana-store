@@ -51,6 +51,9 @@ export const Quote = ({ address, key, quote }: any) => {
           <chakra.p mt={2} fontSize="md" color="white" fontStyle="italic">
             &quot;{quote}&quot;
           </chakra.p>
+          <chakra.p mt={2} fontSize="sm" color="GrayText">
+            {address.slice(0, 5) + "..." + address.slice(-5)}
+          </chakra.p>
         </Box>
         {/* <Box
           borderColor={upvoted ? "green.500" : "gray"}

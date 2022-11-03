@@ -42,7 +42,7 @@ interface CreateDatabaseOptions {
   unit: "KB" | "MB" | "GB";
 }
 
-class SqlanaStore {
+export class SqlanaStore {
   /**
    * Instantiates a new SqlanaStore instance
    *
@@ -238,5 +238,3 @@ class SqlanaStore {
     return { message, documentId: doc.documentId };
   }
 }
-
-export default SqlanaStore;

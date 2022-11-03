@@ -1,7 +1,8 @@
 {
   "name": "sqlana-store",
-  "version": "0.2.2",
-  "main": "core/index.ts",
+  "version": "0.2.5",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
   "author": "anoushk1234 <anoushka1828@gmail.com>",
   "license": "MIT",
   "private": false,

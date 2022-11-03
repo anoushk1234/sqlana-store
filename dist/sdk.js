@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SqlanaStore = void 0;
 const anchor_1 = require("@project-serum/anchor");
 const sdk_1 = require("@shadow-drive/sdk");
 const web3_js_1 = require("@solana/web3.js");
@@ -217,4 +218,4 @@ class SqlanaStore {
         });
     }
 }
-exports.default = SqlanaStore;
+exports.SqlanaStore = SqlanaStore;

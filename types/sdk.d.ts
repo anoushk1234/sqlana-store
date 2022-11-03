@@ -12,7 +12,7 @@ interface CreateDatabaseOptions {
     size: number;
     unit: "KB" | "MB" | "GB";
 }
-declare class SqlanaStore {
+export declare class SqlanaStore {
     /**
      * Instantiates a new SqlanaStore instance
      *
@@ -84,4 +84,4 @@ declare class SqlanaStore {
         documentId: string;
     }>;
 }
-export default SqlanaStore;
+export {};
