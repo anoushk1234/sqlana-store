@@ -19,6 +19,62 @@ TODO
 - [ ] delete collection
 - [ ] delete document
 
-# Docs
+# Usage
 
-Releasing soon
+full docs coming soon
+
+Initialize the SDK
+
+```ts
+const client = new SqlanaStore({
+  username: process.env.USERNAME!,
+  password: process.env.PASSWORD!,
+  payer,
+  network: network, // can be cluster or custom rpc url
+});
+```
+
+Create new Database
+
+```ts
+await client.getDrive(); // initialise shadow drive
+
+const db = await client.createDatabase({
+  name: "solana_quotes",
+  size: 1,
+  unit: "MB",
+}); // creates database
+```
+
+Once you create a database initialise the client with the database storage account key so it can be accessed
+
+```ts
+await client.initClient("7ihYQdkxeWcJEGJwb1wc7mYhJho2bdGE6D7x6RE3Nq4Q");
+```
+
+Create new collection
+
+```ts
+await client.initClient("7ihYQdkxeWcJEGJwb1wc7mYhJho2bdGE6D7x6RE3Nq4Q"); // initialise client with database key and shadow drive
+const collection = await client.createCollection(
+  "7ihYQdkxeWcJEGJwb1wc7mYhJho2bdGE6D7x6RE3Nq4Q", // db key, will remove requirement in future
+  "quotes"
+);
+```
+
+Get collection
+
+```ts
+await client.initClient("7ihYQdkxeWcJEGJwb1wc7mYhJho2bdGE6D7x6RE3Nq4Q"); // this is a common step you d it only once just adding in here so it doesnt get missed
+
+const { collection } = await client.getCollection("quotes");
+```
+
+Create document
+
+```ts
+const doc = await client.createDocument("quotes", {
+  address,
+  quote,
+});
+```
