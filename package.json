@@ -1,6 +1,6 @@
 {
   "name": "sqlana-store",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "author": "anoushk1234 <anoushka1828@gmail.com>",
