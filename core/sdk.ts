@@ -32,8 +32,6 @@ function isURL(inp: string) {
 }
 interface SDKProps {
   payer: Keypair;
-  username?: string;
-  password?: string;
   network: Network;
 }
 interface CreateDatabaseOptions {
@@ -50,15 +48,11 @@ export class SqlanaStore {
    *
    *
    * @param payer - The payer Keypair to fund the stores and used to create database instance
-   * @param username - The username for the database
-   * @param password - The password for the database
    * @returns A new SqlanaStore instance
    *
    * @beta
    */
-  public readonly username;
   private readonly payer;
-  private readonly password;
   public drive: ShdwDrive | null;
   public readonly connection;
   public readonly network: Network;
@@ -66,8 +60,6 @@ export class SqlanaStore {
   private readonly wallet;
   private storageAccount: string | undefined;
   constructor(options: SDKProps) {
-    this.password = options.password || "";
-    this.username = options.username || "";
     this.payer = options.payer;
     this.publicKey = this.payer.publicKey;
     this.drive = null;

@@ -31,8 +31,6 @@ Initialize the SDK
 
 ```ts
 const client = new SqlanaStore({
-  username: process.env.USERNAME!,
-  password: process.env.PASSWORD!,
   payer,
   network: network, // can be cluster or custom rpc url
 });

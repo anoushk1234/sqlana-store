@@ -17,8 +17,6 @@ export default async function handler(
   );
   const network = process.env.NETWORK!;
   const client = new SqlanaStore({
-    username: process.env.USERNAME!,
-    password: process.env.PASSWORD!,
     payer,
     network: network,
   });

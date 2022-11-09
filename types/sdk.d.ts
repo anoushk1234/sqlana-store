@@ -3,8 +3,6 @@ import { Connection, Keypair, PublicKey } from "@solana/web3.js";
 declare type Network = any;
 interface SDKProps {
     payer: Keypair;
-    username?: string;
-    password?: string;
     network: Network;
 }
 interface CreateDatabaseOptions {
@@ -20,15 +18,11 @@ export declare class SqlanaStore {
      *
      *
      * @param payer - The payer Keypair to fund the stores and used to create database instance
-     * @param username - The username for the database
-     * @param password - The password for the database
      * @returns A new SqlanaStore instance
      *
      * @beta
      */
-    readonly username: string;
     private readonly payer;
-    private readonly password;
     drive: ShdwDrive | null;
     readonly connection: Connection;
     readonly network: Network;

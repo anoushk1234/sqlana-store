@@ -25,8 +25,6 @@ function isURL(inp) {
 }
 class SqlanaStore {
     constructor(options) {
-        this.password = options.password || "";
-        this.username = options.username || "";
         this.payer = options.payer;
         this.publicKey = this.payer.publicKey;
         this.drive = null;

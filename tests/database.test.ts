@@ -1,7 +1,7 @@
 import { bs58 } from "@project-serum/anchor/dist/cjs/utils/bytes";
 import { Keypair, PublicKey } from "@solana/web3.js";
 import "jest";
-import SqlanaStore from "../core/sdk";
+import { SqlanaStore } from "../core/sdk";
 import fs from "fs";
 import { ShadowFile } from "@shadow-drive/sdk";
 describe("Database", () => {
@@ -10,8 +10,6 @@ describe("Database", () => {
   );
   const network = process.env.NETWORK!;
   const sqlana = new SqlanaStore({
-    username: process.env.USERNAME!,
-    password: process.env.PASSWORD!,
     payer,
     network: network,
   });
