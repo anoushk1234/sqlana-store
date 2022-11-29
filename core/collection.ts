@@ -59,7 +59,8 @@ export class Collection {
         "collection fetched",
         `https://shdw-drive.genesysgo.net/${this.storageAccount.toString()}/${
           this.collectionId
-        }.json`
+        }.json`,
+        collection
       );
       return { collection: collection };
     } catch (error) {
