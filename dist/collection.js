@@ -53,7 +53,7 @@ class Collection {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const { data: collection } = yield axios_1.default.get(`https://shdw-drive.genesysgo.net/${this.storageAccount.toString()}/${this.collectionId}.json`);
-                console.log("collection fetched");
+                console.log("collection fetched", `https://shdw-drive.genesysgo.net/${this.storageAccount.toString()}/${this.collectionId}.json`);
                 return { collection: collection };
             }
             catch (error) {
